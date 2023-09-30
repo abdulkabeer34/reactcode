@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "Blue Tee",
+    "image": "/pics/shirt1.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Introducing our stylish and versatile Blue Tee. Made from soft and comfortable fabric, this tee is perfect for casual occasions. With its classic design and vibrant blue color, it's a wardrobe essential that combines fashion and comfort. Whether you're going for a relaxed look or dressing up, our Blue Tee has you covered. Add this timeless piece to your collection and stay fashionable.",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "name": "Red Polo",
+    "image": "/pics/shirt2.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Elevate your style with our Red Polo shirt. Crafted with premium materials, it offers a timeless look and unmatched comfort. The rich red color adds a touch of sophistication to any outfit. Whether you're heading to the office or a casual gathering, our Red Polo is the perfect choice. Its classic design and superior quality make it a must-have for any fashion-forward individual.",
+    "price": 24.99
+  },
+  {
+    "id": 3,
+    "name": "Striped Henley",
+    "image": "/pics/shirt3.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Stay fashionable and comfortable in our Striped Henley shirt. Its unique design and breathable fabric make it a must-have. The striped pattern adds a trendy touch to your look, while the comfortable fit ensures all-day comfort. Whether you're going for a laid-back style or dressing up for an outing, our Striped Henley is versatile and stylish. Make a statement with this wardrobe essential.",
+    "price": 29.99
+  },
+  {
+    "id": 4,
+    "name": "White Shirt",
+    "image": "/pics/shirt4.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Classic and elegant, our White Shirt is perfect for formal occasions. Tailored for a sharp fit, it exudes sophistication. The pristine white color complements any attire, making it a versatile addition to your wardrobe. Whether you're attending a business meeting or a special event, our White Shirt ensures you look your best. Elevate your style with this timeless piece.",
+    "price": 34.99
+  },
+  {
+    "id": 5,
+    "name": "Black V-Neck",
+    "image": "/pics/shirt5.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Make a statement with our Black V-Neck tee. Its modern design and premium fabric offer both style and comfort. The deep black color adds a touch of elegance to your look, making it suitable for various occasions. Whether you're going out with friends or enjoying a casual day, our Black V-Neck tee is the perfect choice. Experience fashion and comfort in one.",
+    "price": 22.99
+  },
+  {
+    "id": 6,
+    "name": "Green Top",
+    "image": "/pics/shirt6.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Stay trendy with our Green Top. Its vibrant color and relaxed fit make it a versatile addition to your wardrobe. Whether you're pairing it with jeans or shorts, this top adds a pop of color to your look. Made from high-quality materials, it ensures durability and comfort. Elevate your casual style with our Green Top.",
+    "price": 27.99
+  },
+  {
+    "id": 7,
+    "name": "Yellow Tee",
+    "image": "/pics/shirt7.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Brighten your day with our Yellow Tee. Crafted from high-quality fabric, it's the ideal choice for a casual look. The sunny yellow color adds a cheerful touch to your outfit. Whether you're running errands or enjoying a relaxing day, our Yellow Tee keeps you comfortable and stylish. Add a burst of color to your wardrobe.",
+    "price": 19.99
+  },
+  {
+    "id": 8,
+    "name": "Pink Polo",
+    "image": "/pics/shirt8.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Add a pop of color with our Pink Polo shirt. Its classic design and comfortable fit make it a wardrobe favorite. The soft pink hue adds a touch of femininity to your style. Whether you're heading to a casual brunch or a day out, our Pink Polo ensures you look chic and feel at ease. Embrace timeless fashion with this versatile piece.",
+    "price": 24.99
+  },
+  {
+    "id": 9,
+    "name": "Gray Tee",
+    "image": "/pics/shirt9.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Experience comfort and style with our Gray Tee. Versatile and soft, it's perfect for everyday wear. The neutral gray color complements any outfit, making it a go-to choice. Whether you're relaxing at home or running errands, our Gray Tee keeps you comfortable and effortlessly stylish. Elevate your casual wardrobe with this essential piece.",
+    "price": 21.99
+  },
+  {
+    "id": 13,
+    "name": "Navy Run",
+    "image": "/pics/shoes1.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Elevate your running experience with our Navy Run shoes. Crafted for performance and style, they offer comfort and support for your daily runs and workouts. The navy blue color adds elegance to your athletic gear. These shoes feature advanced cushioning technology, ensuring that every step feels like a breeze. With our Navy Run shoes, you'll conquer your running goals with ease.",
+    "price": 49.99
+  },
+  {
+    "id": 14,
+    "name": "Crim Sneak",
+    "image": "/pics/shoes2.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Step up your sports game with our Crim Sneak shoes. Engineered for athletes demanding quality and style, they're perfect for various sports activities. The rich crimson color makes a bold statement on the field or at the gym. These sneakers offer exceptional performance and support, helping you achieve your fitness goals. With Crim Sneak, you'll outperform the competition.",
+    "price": 59.99
+  },
+  {
+    "id": 15,
+    "name": "Stripe High",
+    "image": "/pics/shoes3.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Make a style statement with our Stripe High shoes. These unique shoes feature a striped pattern for a trendy and eye-catching look. The comfortable fit ensures all-day wearability, making them perfect for both casual outings and special occasions. The stripes not only add flair but also provide added support and stability. Step into Stripe High and be the center of attention.",
+    "price": 54.99
+  },
+  {
+    "id": 16,
+    "name": "Classic Wh",
+    "image": "/pics/shoes4.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Experience timeless style with our Classic Wh shoes. Perfect for casual outings and everyday wear, they offer a clean and versatile look. The classic white color goes well with any outfit, and the durable construction ensures long-lasting comfort. With Classic Wh, you'll always be in vogue and ready for any adventure.",
+    "price": 64.99
+  },
+  {
+    "id": 17,
+    "name": "Blk Run",
+    "image": "/pics/shoes5.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Make a statement with our Blk Run shoes. These sleek running shoes offer style and comfort for your daily workouts and runs. The deep black color exudes confidence and versatility, making them suitable for various occasions. With advanced shock absorption technology, Blk Run ensures a smooth and comfortable ride. Elevate your fitness journey with Blk Run.",
+    "price": 52.99
+  },
+  {
+    "id": 18,
+    "name": "Green Sprt",
+    "image": "/pics/shoes6.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Add a pop of color to your athletic wardrobe with our Green Sprt shoes. Their vibrant green hue and comfortable fit make them a versatile choice for various sports activities. Whether you're hitting the gym or going for a jog in the park, Green Sprt provides the support and style you need. Turn heads with your bold choice of footwear.",
+    "price": 44.99
+  },
+  {
+    "id": 19,
+    "name": "Yel Sneak",
+    "image": "/pics/shoes7.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Brighten your look with our Yel Sneak shoes. Designed for casual outings and relaxed comfort, they're perfect for sunny days. The sunny yellow color adds a cheerful touch to your attire, making you stand out wherever you go. Yel Sneak combines style and ease for a memorable fashion statement. Step into comfort and sunshine with Yel Sneak.",
+    "price": 49.99
+  },
+  {
+    "id": 20,
+    "name": "Pink Athltc",
+    "image": "/pics/shoes8.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Embrace elegance with our Pink Athltc shoes. Their classic design and comfortable fit make them a wardrobe favorite for sports enthusiasts. The soft pink color radiates charm and confidence, ensuring you look chic and feel at ease during your workouts. Whether you're in the gym or out for a walk, Pink Athltc adds a touch of sophistication to your fitness routine.",
+    "price": 59.99
+  },
+  {
+    "id": 21,
+    "name": "Gray Sprts",
+    "image": "/pics/shoes9.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Experience comfort and style with our Gray Sprts shoes. Versatile and soft, they're perfect for various sports activities and everyday wear. The neutral gray color complements any athletic attire, making them your go-to choice for a sporty look. Stay active and fashionable with Gray Sprts, your reliable fitness companion.",
+    "price": 54.99
+  },
+  {
+    "id": 22,
+    "name": "Ora Train",
+    "image": "/pics/shoes10.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Brighten your fitness routine with our Ora Train shoes. Their vibrant orange color and specialized design make them a standout addition to your workout gear. Ora Train delivers the support and motivation you need to push your limits. Get ready to conquer your fitness goals with energy and style.",
+    "price": 47.99
+  },
+  {
+    "id": 23,
+    "name": "Purple Jog",
+    "image": "/pics/shoes11.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Stay cozy and stylish with our Purple Jog shoes. Their rich purple color and comfortable design make them perfect for jogging sessions or casual outings. Whether you're hitting the trails or running errands, Purple Jog provides the perfect blend of fashion and comfort. Make every step count with Purple Jog.",
+    "price": 69.99
+  },
+  {
+    "id": 24,
+    "name": "Turq Boot",
+    "image": "/pics/shoes12.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Keep warm and trendy with our Turq Boot. The eye-catching turquoise color and cozy fabric make them a great addition to your winter fitness wardrobe. Whether you're strolling through the snow or relaxing by the fireplace, Turq Boot ensures you stay snug and stylish during the colder months.",
+    "price": 59.99
+  },
+  {
+    "id": 25,
+    "name": "Blue Sprt",
+    "image": "/pics/shoes13.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Stay stylish and comfortable with our Blue Sprt shoes. The versatile blue color and relaxed fit make them an excellent choice for various sports activities and casual occasions. Whether you're at the gym or hanging out with friends, Blue Sprt complements your active lifestyle with ease and flair.",
+    "price": 54.99
+  },
+  {
+    "id": 26,
+    "name": "Sky Blue",
+    "image": "/pics/watch1.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "The Sapphire Dream watch invites you to experience the elegance and allure of its design. This timepiece features a mesmerizing sapphire-blue dial paired with a polished stainless steel case. It's a symbol of sophistication and style, perfect for those who appreciate timeless beauty and craftsmanship. With its classic yet captivating look, the Sapphire Dream watch is a must-have for any discerning collector.",
+    "price": 179.9
+  },
+  {
+    "id": 27,
+    "name": "Red Dawn",
+    "image": "/pics/watch2.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "The Crimson Horizon watch is a bold and striking accessory that will turn heads wherever you go. Its vibrant crimson strap and sunburst dial make a statement of confidence and individuality. This watch is for those who want to make a lasting impression and express their unique style. The Crimson Horizon watch is not just a timepiece; it's a symbol of self-assured elegance and charm.",
+    "price": 199.9
+  },
+  {
+    "id": 28,
+    "name": "Green Leaf",
+    "image": "/pics/watch3.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Connect with the tranquility of nature with the Forest Whisper watch. This timepiece features a deep green leather band and a dial adorned with leaf-inspired designs, evoking a sense of serenity and harmony. Whether you're an outdoor enthusiast or simply appreciate the beauty of the natural world, the Forest Whisper watch is an ideal companion that brings a touch of the forest to your wrist.",
+    "price": 149.9
+  },
+  {
+    "id": 29,
+    "name": "Gold Rush",
+    "image": "/pics/watch4.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Indulge in the opulence of the Golden Elegance watch. Featuring a luxurious gold-plated stainless steel case and a sunray dial, this timepiece is a symbol of sophistication and class. It's not just a watch; it's a statement piece that exudes timeless beauty and refinement. Elevate your style with the Golden Elegance watch, a true masterpiece.",
+    "price": 249.9
+  },
+  {
+    "id": 30,
+    "name": "Silver Star",
+    "image": "/pics/watch5.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Embrace the enchanting beauty of the Starry Night watch. With a silver stainless steel bracelet and a dial that resembles a starry sky, this watch is perfect for those who appreciate understated elegance and cosmic wonders. The Starry Night watch is more than a timepiece; it's a celestial masterpiece that adds a touch of magic to your wrist.",
+    "price": 169.9
+  },
+  {
+    "id": 31,
+    "name": "Rose Petal",
+    "image": "/pics/watch6.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Adorn your wrist with the delicate charm of the Rose Petal watch. Its soft pink leather strap and mother-of-pearl dial exude grace and femininity. This watch is not just an accessory; it's a symbol of timeless beauty and elegance. Whether you're attending a special event or adding a touch of sophistication to your daily attire, the Rose Petal watch is the perfect choice.",
+    "price": 139.9
+  },
+  {
+    "id": 32,
+    "name": "Azure Breeze",
+    "image": "/pics/watch7.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Feel the calm of a clear day with the Azure Breeze watch. Its sky-blue leather band and clean dial design radiate serenity and relaxation. This watch is perfect for those who appreciate a touch of tranquility in their accessories. Whether you're on a leisurely stroll or attending a business meeting, the Azure Breeze watch complements your style effortlessly.",
+    "price": 159.9
+  },
+  {
+    "id": 33,
+    "name": "Nautical Adventure",
+    "image": "/pics/watch8.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Embark on a nautical journey with the Nautical Adventure watch. Its deep blue dial reminiscent of ocean waves and a stainless steel case symbolize the spirit of exploration. This watch is ideal for sea lovers and adventurers who seek both style and functionality. Dive into the world of adventure with the Nautical Adventure watch on your wrist.",
+    "price": 189.9
+  },
+  {
+    "id": 34,
+    "name": "Ruby Gem",
+    "image": "/pics/watch9.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Experience the allure of the Ruby Enchantment watch. Its red leather strap and intricate dial design are inspired by the beauty of rubies. This watch is perfect for those who want to captivate with their style and make a bold statement. The Ruby Enchantment watch is a true gem in the world of timepieces, offering both elegance and charm.",
+    "price": 209.9
+  },
+  {
+    "id": 35,
+    "name": "Emerald Glow",
+    "image": "/pics/watch10.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Unveil the ]mystique of the Emerald Mystique watch. With an emerald-green leather strap and an intricate dial, it's a true work of art. This watch is perfect for those who appreciate unique craftsmanship and elegance. Whether you're attending a formal event or celebrating a special occasion, the Emerald Mystique watch adds a touch of luxury to your attire.",
+    "price": 179.9
+  },
+  {
+    "id": 36,
+    "name": "Amber Blaze",
+    "image": "/pics/watch11.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "description": "Ignite your style with the Amber Blaze watch. Its amber leather strap and flame-inspired dial design radiate energy and passion. This watch is an excellent choice for those who want to make a bold fashion statement and stand out in any crowd. With the Amber Blaze watch, you're not just keeping time; you're making a fiery statement of individuality and confidence.",
+    "price": 169.9
+  },
+  {
+    "id": 37,
+    "name": "Azure Skies",
+    "description": "Experience the serenity of a clear blue sky with our Azure Skies hoodie. Crafted with the finest materials, this hoodie offers supreme comfort and style. Whether you're out for a casual stroll or lounging at home, this hoodie will keep you cozy and fashionable. Embrace the calming embrace of azure and stay in vogue. Azure Skies is priced at $49.99.",
+    "image": "/pics/hoodie1.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 38,
+    "name": "Crimson Blaze",
+    "description": "Ignite your style with the Crimson Blaze hoodie. Its bold crimson color and modern design make a statement wherever you go. Made from premium materials, this hoodie is not just fashionable but also comfortable for all-day wear. Be the center of attention with Crimson Blaze. Price: $54.99.",
+    "image": "/pics/hoodie2.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 54.99
+  },
+  {
+    "id": 39,
+    "name": "Zigzag Fusion",
+    "description": "Elevate your fashion game with the Zigzag Fusion hoodie. Featuring a dynamic zigzag pattern, this hoodie is a fusion of style and comfort. It's perfect for those who crave a unique and eye-catching look. Make a bold statement with Zigzag Fusion. Price: $59.99.",
+    "image": "/pics/hoodie3.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 59.99
+  },
+  {
+    "id": 40,
+    "name": "Arctic Frost",
+    "description": "Embrace the chill with our Arctic Frost hoodie. The frosty white design is as cool as ice and perfect for those frosty winter days. This hoodie not only keeps you warm but also keeps you in vogue. Stay cool and cozy with Arctic Frost. Price: $49.99.",
+    "image": "/pics/hoodie4.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 41,
+    "name": "Obsidian Night",
+    "description": "Step into the night with the Obsidian Night hoodie. The dark, mysterious beauty of obsidian is captured in this exquisite hoodie. It's perfect for those who appreciate the enigmatic allure of the night. Embrace the darkness with Obsidian Night. Price: $54.99.",
+    "image": "/pics/hoodie5.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 54.99
+  },
+  {
+    "id": 42,
+    "name": "Emerald Oasis",
+    "description": "Discover your oasis of style with the Emerald Oasis hoodie. The rich green color and intricate design transport you to a lush, tranquil paradise. Crafted for both comfort and fashion, this hoodie is a must-have for those who seek elegance in simplicity. Experience the allure of Emerald Oasis. Price: $59.99.",
+    "image": "/pics/hoodie6.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 59.99
+  },
+  {
+    "id": 43,
+    "name": "Sunset Blaze",
+    "description": "Experience the warmth of a setting sun with the Sunset Blaze hoodie. The fiery hues and bold design capture the essence of a breathtaking sunset. Made for those who crave vibrant style, this hoodie will keep you feeling cozy and looking fabulous. Chase the sunset with Sunset Blaze. Price: $49.99.",
+    "image": "/pics/hoodie7.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 44,
+    "name": "Raspberry Burst",
+    "description": "Indulge in the sweet and sassy style of the Raspberry Burst hoodie. The vibrant raspberry color is sure to turn heads wherever you go. This hoodie is not just a fashion statement but also a testament to comfort. Make a bold fashion statement with Raspberry Burst. Price: $54.99.",
+    "image": "/pics/hoodie8.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 54.99
+  },
+  {
+    "id": 45,
+    "name": "Slate Mirage",
+    "description": "Enter the world of illusion with the Slate Mirage hoodie. The intriguing slate gray design creates a mirage of depth and mystery. Crafted for comfort and style, this hoodie is perfect for those who appreciate a touch of mystique in their fashion. Get lost in the Slate Mirage. Price: $59.99.",
+    "image": "/pics/hoodie9.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 59.99
+  },
+  {
+    "id": 46,
+    "name": "Golden Horizon",
+    "description": "Witness the dawn of a new style era with the Golden Horizon hoodie. The lustrous golden hue represents hope and new beginnings. Made from premium materials, this hoodie combines comfort and elegance effortlessly. Embrace the radiance of the Golden Horizon. Price: $49.99.",
+    "image": "/pics/hoodie10.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 49.99
+  },
+  {
+    "id": 47,
+    "name": "Aqua Mist",
+    "description": "Dive into a world of refreshing style with the Aqua Mist hoodie. The soothing aqua color evokes the tranquility of ocean waves. Designed for both comfort and fashion, this hoodie is your perfect companion for a relaxed day out. Drift away with Aqua Mist. Price: $54.99.",
+    "image": "/pics/hoodie11.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 54.99
+  },
+  {
+    "id": 48,
+    "name": "Lilac Breeze",
+    "description": "Feel the gentle embrace of the Lilac Breeze hoodie. The soft lilac shade and elegant design create a sense of serenity. Crafted for comfort and style, this hoodie is a symbol of grace and sophistication. Let the Lilac Breeze carry you away. Price: $59.99.",
+    "image": "/pics/hoodie12.jpg",
+    "image1": "/pics/variation1.jpg",
+    "image2": "/pics/variation2.jpg",
+    "image3": "/pics/variation3.jpg",
+    "price": 59.99
+  }
+]

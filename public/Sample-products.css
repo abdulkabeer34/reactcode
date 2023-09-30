@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:wght@200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.main-sample{
+    height: auto;
+    background-color: #282828;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* overflow: auto; */
+} 
+.sample-title h1{
+    font-weight: 1000;
+    font-size: 2.75rem;
+    color: white;
+}
+
+.sample-title .under-score{
+    background-color: white;
+    height: 0.1rem;    
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+
+.sample-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70vw;
+    /* border: 2px solid red; */
+    margin-top: 2rem;
+}
+
+.sample-section .image img{
+    width: 200px;
+    height: 250px;
+    scale: 1;
+}
+
+.sample-section .content h1{
+  font-size: 2.5rem;
+}
+
+.sample-section .content{
+    line-height: 5rem;
+}
+
+.sample-section .content p{
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+}
+
+.sample-section .btn{
+    background:#3aaab2 ;
+    border-radius: 1em .3em 0 0;
+    padding: 10px 30px;
+    /* margin-top: -95px; */
+    border: none;
+    font-size: .7rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sample-section .btn:hover{
+    background-color: #148a92;
+}
+
+
+@media(max-height:600px){
+    .sample-section .content h1{
+        position: relative;
+        top: 20px;
+    }
+    .sample-section  .content p{
+        position: relative;
+        top: 16px;
+    }
+
+    .sample-section .btn{
+        position: relative;
+        top: 15px;
+    }
+
+    .main-sample .title{
+        position: relative;
+        top: 20px;
+    }
+    .sample-section{
+        width: 88vw;
+    }
+}
+
+@media (max-height:370px){
+    .sample-section{
+        width: 88vw;
+    }
+    .main-sample .title{
+        position: relative;
+        top: 30px;
+    }
+}

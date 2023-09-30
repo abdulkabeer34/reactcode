@@ -1,0 +1,49 @@
+[{
+    "id": 49,
+    "name":"Apple Headphones",
+    "image": "/pics/headphone-1.png",
+    "price": 59.99
+  },
+  {
+    "id": 50,
+    "name": "Headphone wireless",
+    "image": "/pics/headphone-2.png",
+    "price": 29.99
+  },
+  {
+    "id": 51,
+    "name": "Gaming Headphones",
+    "image": "/pics/headphone-3.png",
+    "price": 79.99
+  },
+  {
+    "id": 52,
+    "name": "Samsung Galaxry Ultra",
+      "image": "/pics/mobile-1.png",
+    "price": 69.99
+  },
+  {
+    "id": 53,
+    "name": "Iphone 14 pro",
+      "image": "/pics/mobile-2.png",
+    "price": 39.99
+  },
+  {
+    "id": 54,
+    "name": "Apple air pad 1",
+      "image": "/pics/ipad-1.png",
+    "price": 39.99
+  },
+  {
+    "id": 55,
+    "name": "Cpu Cooler(RGB)",
+      "image": "/pics/cpu-1.png",
+    "price": 39.99
+  },
+  {
+    "id": 56,
+    "name": "Cpu Cooler",
+    "image": "/pics/cpu-5.png",
+    "price": 39.99
+  }
+]
