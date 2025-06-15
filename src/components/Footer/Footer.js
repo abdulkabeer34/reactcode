@@ -1,52 +1,70 @@
 import React from "react";
-import "./Footer.css";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+
 export default function Footer() {
   return (
-    <>
-      <div className="main-footer">
-        <div className="footer-upper-content">
-          <div className="left">
-            <h1>Sign Up For Emails</h1>
-            <h4>
-              Enjoy 50% on you first order when you sign up to our website
-            </h4>
-          </div>
-          <div className="right">
-            <input type="text" placeholder="Enter your email" />
-            <button>Subscribe</button>
-          </div>
-        </div>
-        <div className="footer-lower-content">
-          <div className="first content">
-            <h1>Contact us</h1>
-            <p>customer Service</p>
-            <p>Find Store</p>
-            <p>Book Appointement</p>
-            <p>Tel: (234) 23-45-666</p>
-          </div>
-          <div className="second content">
-            <h1>Design Service</h1>
-            <p>Interior Design</p>
-            <p>Room Planner</p>
-            <p>Our Project</p>
-            <p>Design Chart</p>
-          </div>
-          <div className="third content">
-            <h1>About</h1>
-            <p>Our Story</p>
-            <p>Career</p>
-            <p>Influencers</p>
-            <p>Join Our Team</p>
-          </div>
-          <div className="fourth content">
-            <h1>CLIENT SERVICE</h1>
-            <p>Contact Us</p>
-            <p>Track Your Order</p>
-            <p>Returns & Exchanges</p>
-            <p>Shipping Information</p>
-          </div>
-        </div>
-      </div>
-    </>
+    <footer
+      style={{ backgroundColor: "#8B5E3C" }}
+      className="text-white py-5 mt-5"
+    >
+      <Container>
+        {/* Top section */}
+        <Row className="align-items-center mb-5">
+          <Col md={6} className="mb-3 mb-md-0">
+            <h3 className="fw-bold">Sign Up For Emails</h3>
+            <p className="mb-0">
+              Enjoy 50% off your first order when you sign up to our website.
+            </p>
+          </Col>
+          <Col md={6}>
+            <Form className="d-flex">
+              <Form.Control
+                type="email"
+                placeholder="Enter your email"
+                className="me-2"
+              />
+              <Button variant="light" className="fw-bold">
+                Subscribe
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+
+        {/* Bottom section */}
+        <Row className="text-start">
+          <Col xs={6} md={3} className="mb-4">
+            <h5 className="fw-bold">Contact Us</h5>
+            <p className="mb-1">Customer Service</p>
+            <p className="mb-1">Find Store</p>
+            <p className="mb-1">Book Appointment</p>
+            <p className="mb-0">Tel: (234) 23-45-666</p>
+          </Col>
+
+          <Col xs={6} md={3} className="mb-4">
+            <h5 className="fw-bold">Design Service</h5>
+            <p className="mb-1">Interior Design</p>
+            <p className="mb-1">Room Planner</p>
+            <p className="mb-1">Our Project</p>
+            <p className="mb-0">Design Chart</p>
+          </Col>
+
+          <Col xs={6} md={3} className="mb-4">
+            <h5 className="fw-bold">About</h5>
+            <p className="mb-1">Our Story</p>
+            <p className="mb-1">Career</p>
+            <p className="mb-1">Influencers</p>
+            <p className="mb-0">Join Our Team</p>
+          </Col>
+
+          <Col xs={6} md={3} className="mb-4">
+            <h5 className="fw-bold">Client Service</h5>
+            <p className="mb-1">Contact Us</p>
+            <p className="mb-1">Track Your Order</p>
+            <p className="mb-1">Returns & Exchanges</p>
+            <p className="mb-0">Shipping Information</p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
   );
 }

@@ -1,14 +1,6 @@
 {
-  "cartsDatabase": [
-    {
-      "id": "97258h2050927sdadf",
-      "name": "Purple Jog",
-      "image": "/pics/shoes11.jpg",
-      "quantity": 3,
-      "price": 69.99
-    }
-  ],
+  "cartsDatabase": [],
   "items": {
-    "item": 3
+    "item": 5
   }
 }

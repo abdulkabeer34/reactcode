@@ -1,107 +1,147 @@
 import React, { useState, useEffect } from "react";
-import "./Cart.css";
 import axios from "axios";
 
 export default function Cart({ setSelectedValue }) {
   const [NewArr, setNewArr] = useState([]);
+  const [shippingCost, setShippingCost] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const fetchData = async () => {
-      let data = await axios.get("http://127.0.0.1:3002/cartsDatabase");
-      setNewArr(...NewArr, data.data);
+      const res = await axios.get("http://127.0.0.1:3002/cartsDatabase");
+      setNewArr(res.data);
     };
     fetchData();
   }, []);
 
-  async function remove(items) {
-    const itemos =
-      items.currentTarget.parentNode.childNodes[2].childNodes[0].textContent;
+  useEffect(() => {
+    const subtotal = NewArr.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    setTotalPrice(subtotal + shippingCost);
+  }, [NewArr, shippingCost]);
 
-    items.currentTarget.parentNode.remove();
-    axios.delete(
-      "http://127.0.0.1:3002/cartsDatabase/" + items.currentTarget.id
-    );
+  const remove = async (e) => {
+    const row = e.target.closest(".product-row");
+    const quantity = parseInt(row?.querySelector(".quantity")?.textContent || "0");
+    const id = e.currentTarget.id;
 
-    const getItems = async () => {
-      let data = await axios.get("http://127.0.0.1:3002/items");
-      setSelectedValue(data.data.item - parseInt(itemos));
-      axios.put("http://127.0.0.1:3002/items", {
-        item: data.data.item - parseInt(itemos),
-      });
-    };
-    getItems();
-  }
+    row.remove();
+    await axios.delete(`http://127.0.0.1:3002/cartsDatabase/${id}`);
 
-  function input(e) {
-    e.cancelable = false;
-  }
+    const itemsRes = await axios.get("http://127.0.0.1:3002/items");
+    const updatedCount = itemsRes.data.item - quantity;
+    setSelectedValue(updatedCount);
+    await axios.put("http://127.0.0.1:3002/items", { item: updatedCount });
+  };
 
   return (
-    <div className="cart-main">
-      <div className="cart-center">
-        <div className="top-heading">
-          <h1>Shoping Cart</h1>
-        </div>
-        <div className="bottom-cart-content">
-          <div className="cart-left">
-            <div className="cart-heading">
-              <h1 className="product-name-heading">Product</h1>
-              <h1 className="price">Price</h1>
-              <h1 className="quatity">Quantity</h1>
-              <h1></h1>
+    <div className="container py-5">
+      <h2 className="mb-4 text-center">🛒 Your Cart</h2>
+      <div className="row g-4">
+        {/* LEFT SIDE */}
+        <div className="col-lg-8">
+          <div className="bg-light rounded shadow-sm p-3">
+            <div className="row fw-bold border-bottom pb-2 mb-3">
+              <div className="col-md-5">Product</div>
+              <div className="col-md-2">Price</div>
+              <div className="col-md-2">Quantity</div>
+              <div className="col-md-3 text-end">Action</div>
             </div>
-            <div className="cart-product-list">
-              {NewArr.map((item) => (
-                <div className="product">
-                  <div className="name">
-                    <div className="img">
-                      <img src={item.image} alt="" />
-                    </div>
-                    <h3>{item.name}</h3>
+
+            {NewArr.length === 0 ? (
+              <div className="text-center py-5">
+                <h5 className="text-muted">🚫 No items in your cart</h5>
+              </div>
+            ) : (
+              NewArr.map((item) => (
+                <div className="row align-items-center border-bottom py-3 product-row" key={item.id}>
+                  <div className="col-md-5 d-flex align-items-center gap-3">
+                    <img
+                      src={item.image}
+                      alt=""
+                      width="70"
+                      height="80"
+                      className="bg-secondary-subtle rounded"
+                    />
+                    <h6 className="mb-0">{item.name}</h6>
                   </div>
-                  <div className="price">${item.price}</div>
-                  <div className="quantity">{item.quantity}</div>
-                  <div onClick={remove} id={item.id} className="remove-btn">
-                    <i className="fas fa-x"></i>
-                    <h4>Remove</h4>
+                  <div className="col-md-2">${item.price}</div>
+                  <div className="col-md-2 quantity">{item.quantity}</div>
+                  <div className="col-md-3 text-end">
+                    <button
+                      onClick={remove}
+                      id={item.id}
+                      className="btn btn-sm btn-outline-danger"
+                    >
+                      <i className="fas fa-trash me-1"></i>Remove
+                    </button>
                   </div>
                 </div>
-              ))}
-            </div>
+              ))
+            )}
           </div>
-          <div className="cart-right">
-            <div className="cart-right-content">
-              <div className="sub-total">
-                <h1>Subtotal</h1>
-                <h1>$456</h1>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div className="col-lg-4">
+          <div className="card shadow-sm">
+            <div className="card-body">
+              <h5 className="mb-3">🧾 Summary</h5>
+
+              <div className="d-flex justify-content-between mb-2">
+                <span>Subtotal</span>
+                <span>
+                  ${NewArr.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+                </span>
               </div>
-              <div className="shipping">
-                <div className="shipping-content">
-                  <h3>Shipping</h3>
-                  <div className="flat-rate">
-                    <input onClick={input} name="Check-box" type="radio" />
-                    <p>
-                      Flate Rate : <span>$20</span>
-                    </p>
-                  </div>
-                  <div className="local-pickup">
-                    <input onClick={input} name="Check-box" type="radio" />
-                    <p>
-                      Local Pickup : <span>$25</span>
-                    </p>
-                  </div>
-                  <div className="flat-rate">
-                    <input onClick={input} name="Check-box" type="radio" />
-                    <p>Free Shipping</p>
-                  </div>
+
+              <hr />
+
+              <div className="mb-3">
+                <h6 className="mb-2">Shipping Options</h6>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    name="shipping"
+                    className="form-check-input"
+                    onChange={() => setShippingCost(20)}
+                  />
+                  <label className="form-check-label">
+                    Flat Rate: <span className="text-primary">$20</span>
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    name="shipping"
+                    className="form-check-input"
+                    onChange={() => setShippingCost(25)}
+                  />
+                  <label className="form-check-label">
+                    Local Pickup: <span className="text-primary">$25</span>
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    name="shipping"
+                    className="form-check-input"
+                    onChange={() => setShippingCost(0)}
+                  />
+                  <label className="form-check-label">Free Shipping</label>
                 </div>
               </div>
-              <div className="total">
-                <h1>Total</h1>
-                <h1>{totalPrice}</h1>
+
+              <hr />
+
+              <div className="d-flex justify-content-between fw-bold mb-3">
+                <span>Total</span>
+                <span>${totalPrice}</span>
               </div>
-              <div className="btn">Proceed to Checkout</div>
+
+              <button className="btn btn-dark w-100" disabled={NewArr.length === 0}>
+                Proceed to Checkout
+              </button>
             </div>
           </div>
         </div>

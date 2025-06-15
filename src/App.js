@@ -1,14 +1,12 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { ReactDOM, useEffect, useState } from "react";
-import React, { Component } from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {useState } from "react";
+import React from "react";
 
 import Footer from "./components/Footer/Footer";
 import Product_detail from "./Pages/Details/Product_detail";
 import Home from "./components/Home/Home";
 import Cart from "./Pages/Cart/Cart";
-import Header from "./components/Header1/Header";
+import Header from "./components/Header/Header";
 import Product_List from "./Pages/Product-lists/Product_List";
 
 export default function App() {

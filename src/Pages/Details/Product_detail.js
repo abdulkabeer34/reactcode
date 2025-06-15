@@ -1,193 +1,140 @@
 import React, { useEffect, useState } from "react";
-import "./product_detail.css";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Container, Row, Col, Image, Button, Form } from "react-bootstrap";
 
-export default function Product_detail({ setSelectedValue }) {
-  let [count, setCount] = useState(0);
-  let [newcount, setNewCount] = useState(0);
+export default function ProductDetail({ setSelectedValue }) {
   const { name, id } = useParams();
-  const [orgImage, setOrgImg] = useState();
-  const [Data, setData] = useState([]);
-  let [state, setState] = useState(true);
-  const [descrip, setDescrip] = useState();
-
-  const main = document.querySelector(".main-product");
+  const [data, setData] = useState([]);
+  const [count, setCount] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isOriginalImage, setIsOriginalImage] = useState(true);
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await axios.get("http://localhost:3003/" + name);
-      setData(data.data);
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3003/${name}`);
+        setData(res.data);
+      } catch (err) {
+        console.error("Error fetching product data:", err);
+      }
     };
+    fetchData();
+  }, [name]);
 
-    getData();
-  }, []);
+  const handleImageChange = (src) => {
+    setSelectedImage(src);
+    setIsOriginalImage(false);
+  };
 
-  function changeImage(item) {
-    main.firstElementChild.src = item.target.src;
-    setOrgImg(item.target.src);
-    setState(false);
-  }
-
-  async function clicked(event) {
+  const handleAddToCart = async () => {
     setSelectedValue(false);
 
-    const getData = async () => {
-      let data = await axios.get("http://127.0.0.1:3002/items");
-      setSelectedValue(data.data.item + count + 455);
-      axios.put("http://127.0.0.1:3002/items", {
-        item: data.data.item + count,
-      });
-    };
-    getData();
+    const res = await axios.get("http://127.0.0.1:3002/items");
+    const newItemCount = res.data.item + count + 455;
+    setSelectedValue(newItemCount);
 
-    Data.map(function (item) {
-      if (item.id == id) {
-        if (count != 0) {
-          if (state) {
-            axios.post("http://127.0.0.1:3002/cartsDatabase", {
-              id:
-                Math.floor(Math.random() * 1000000) +
-                "h" +
-                Math.floor(Math.random() * 100000000) +
-                "sd" +
-                "adf",
-              name: item.name,
-              image: item.images.image,
-              quantity: count,
-              price: item.price,
-            });
-          } else {
-            axios.post("http://127.0.0.1:3002/cartsDatabase", {
-              id:
-                Math.floor(Math.random() * 1000000) +
-                "h" +
-                Math.floor(Math.random() * 100000000) +
-                "sd" +
-                "adf",
-              name: item.name,
-              image: orgImage,
-              quantity: count,
-              price: item.price,
-            });
-          }
-        }
-      }
+    await axios.put("http://127.0.0.1:3002/items", {
+      item: res.data.item + count,
     });
-  }
 
-  function increase() {
-    setCount(++count);
-    setNewCount(newcount + count);
-  }
+    const selectedItem = data.find((item) => item.id == id);
+    if (selectedItem && count > 0) {
+      const cartItem = {
+        id: `${Math.floor(Math.random() * 1000000)}h${Math.floor(Math.random() * 100000000)}sdadf`,
+        name: selectedItem.name,
+        image: isOriginalImage ? selectedItem.images.image : selectedImage,
+        quantity: count,
+        price: selectedItem.price,
+      };
 
-  function decrease() {
-    if (count > 0) {
-      setCount(--count);
-      setNewCount(newcount - count);
+      await axios.post("http://127.0.0.1:3002/cartsDatabase", cartItem);
     }
-  }
+  };
+
+  const item = data.find((item) => item.id == id);
+  if (!item) return null;
+
+  const allImages = [
+    item.images.image,
+    item.images.image1,
+    item.images.image2,
+    item.images.image3,
+  ];
 
   return (
-    <>
-      {Data.map(function (item) {
-        if (item.id == id) {
-          return (
-            <div className="detail-main">
-              <div className="detail-left">
-                <div className="main-product">
-                  <img src={item.images.image} alt="" />
-                </div>
-                <div className="product-varients">
-                  <div className="img1 varients-img">
-                    <img onClick={changeImage} src={item.images.image} alt="" />
-                  </div>
-                  <div className="img2 varients-img">
-                    <img
-                      onClick={changeImage}
-                      src={item.images.image1}
-                      alt=""
-                    />
-                  </div>
-                  <div className="img3 varients-img">
-                    <img
-                      onClick={changeImage}
-                      src={item.images.image2}
-                      alt=""
-                    />
-                  </div>
-                  <div className="img4 varients-img">
-                    <img
-                      onClick={changeImage}
-                      src={item.images.image3}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="detail-right">
-                <div className="cart-content-top">
-                  <h1>{item.name}</h1>
-                  <p>{item.description}</p>
-                  <p className="cart-para">{item.description.slice(0, 90)}</p>
-                  <div className="availibility">
-                    <h3>
-                      Availibility:
-                      <span>
-                        <i className="fa-solid fa-check"></i>in stock
-                      </span>
-                    </h3>
-                    <h3>
-                      sku:<span>0034</span>
-                    </h3>
-                  </div>
-                </div>
-                <div className="cart-content-bottom">
-                  <div className="actual-price">
-                    <h1>${item.price}-$54.99</h1>
-                  </div>
-                  <div className="select-color">
-                    <h3>Select Color</h3>
-                    <select className="color-select">
-                      <option value="" disabled defaultValue>
-                        Select a color
-                      </option>
-                      <option className="red" value="red">
-                        Red
-                      </option>
-                      <option className="blue" value="blue">
-                        Blue
-                      </option>
-                      <option className="green" value="green">
-                        Green
-                      </option>
-                      <option className="yellow" value="yellow">
-                        Yellow
-                      </option>
-                      <option className="orange" value="orange">
-                        Orange
-                      </option>
-                    </select>
-                  </div>
-                  <div className="total-price">
-                    <h1>${item.price * count}</h1>
-                  </div>
-                  <div className="quantity">
-                    <div className="actual-quantity">{count}</div>
-                    <div className="signs">
-                      <i onClick={increase} className="fas fa-plus"></i>
-                      <i onClick={decrease} className="fas fa-minus"></i>
-                    </div>
-                    <button onClick={clicked} className="btn">
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        }
-      })}
-    </>
+    <Container className="my-5">
+      <Row>
+        {/* Left: Images */}
+        <Col md={6} className="text-center">
+          <Image
+            src={selectedImage || item.images.image}
+            fluid
+            rounded
+            style={{
+              maxWidth: "100%",
+              maxHeight: "300px",
+              objectFit: "contain",
+            }}
+          />
+          <div className="d-flex justify-content-center mt-3 flex-wrap gap-2">
+            {allImages.map((src, idx) => (
+              <Image
+                key={idx}
+                src={src}
+                thumbnail
+                onClick={() => handleImageChange(src)}
+                style={{
+                  width: 80,
+                  height: 80,
+                  cursor: "pointer",
+                  objectFit: "cover",
+                }}
+              />
+            ))}
+          </div>
+        </Col>
+
+        {/* Right: Details */}
+        <Col md={6}>
+          <h2>{item.name}</h2>
+          <p>{item.description}</p>
+
+          <div className="mb-3">
+            <strong>Availability:</strong>{" "}
+            <span className="text-success">In Stock</span>
+          </div>
+          <div className="mb-3">
+            <strong>SKU:</strong> <span>0034</span>
+          </div>
+          <h4 className="text-primary">${item.price}</h4>
+          <div className="d-flex align-items-center gap-3 mb-3">
+            <Button
+              variant="outline-secondary"
+              onClick={() => setCount(Math.max(0, count - 1))}
+            >
+              -
+            </Button>
+            <span>{count}</span>
+            <Button
+              variant="outline-secondary"
+              onClick={() => setCount(count + 1)}
+            >
+              +
+            </Button>
+          </div>
+
+          <h5>Total: ${item.price * count}</h5>
+
+          <Button
+            variant="warning"
+            onClick={handleAddToCart}
+            disabled={count === 0}
+          >
+            Add to Cart
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 }
