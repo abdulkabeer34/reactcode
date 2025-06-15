@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { ReactDOM, useEffect,useState } from "react";
-import React, { Component } from 'react'
+import { ReactDOM, useEffect, useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
 import Footer from "./components/Footer/Footer";
@@ -12,23 +12,28 @@ import Header from "./components/Header1/Header";
 import Product_List from "./Pages/Product-lists/Product_List";
 
 export default function App() {
+  const [selectedValue, setSelectedValue] = useState(true);
 
-  const [selectedValue, setSelectedValue] = useState(true)
-
-    return (
-      <>
+  return (
+    <>
       <Router>
-      <Header selectedValue={selectedValue} />
+        <Header selectedValue={selectedValue} />
         <Routes>
-          <Route exact path="/"  element={<Home/>}/>
-          <Route    exact path="/details/:name/:id" element={<Product_detail  setSelectedValue={setSelectedValue} />}/>
-          <Route exact path="/cart"    element={<Cart setSelectedValue={setSelectedValue} />}/>
-          <Route exact path="/product-lists/:name" element={<Product_List/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/details/:name/:id"
+            element={<Product_detail setSelectedValue={setSelectedValue} />}
+          />
+          <Route
+            exact
+            path="/cart"
+            element={<Cart setSelectedValue={setSelectedValue} />}
+          />
+          <Route exact path="/product-lists/:name" element={<Product_List />} />
         </Routes>
       </Router>
-    <Footer   />
-      </>
-    )
-  }
-
-
+      <Footer />
+    </>
+  );
+}

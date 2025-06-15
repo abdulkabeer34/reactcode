@@ -1,119 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:wght@300&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
 }
 
-.main-footer{
-    height: 500px;
-    background-color: #a96d6d;
-    color: white;
+.main-footer {
+  height: 500px;
+  background-color: #a96d6d;
+  color: white;
 }
 
-.footer-upper-content{
-    display: flex;
-    align-self: center;
-    justify-content: space-around;
-    height: 137px;
-   border-bottom: 1px solid rgb(81, 81, 81);
+.footer-upper-content {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  height: 137px;
+  border-bottom: 1px solid rgb(81, 81, 81);
 }
 
-.footer-upper-content .left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 407px;
+.footer-upper-content .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 407px;
 }
 
-
-.footer-upper-content .left h1{
-    font-size: 2.2rem;
+.footer-upper-content .left h1 {
+  font-size: 2.2rem;
 }
-.footer-upper-content .left h4{
-    font-size: 1rem;
-}
-
-.footer-upper-content .right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-upper-content .left h4 {
+  font-size: 1rem;
 }
 
-
-.footer-upper-content .right input{
-    border: none;
-    outline: none;
-    width: 300px;
-    height: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    font-variant-position: normal;
+.footer-upper-content .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-upper-content .right input::placeholder{
+.footer-upper-content .right input {
+  border: none;
+  outline: none;
+  width: 300px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  font-variant-position: normal;
+}
+
+.footer-upper-content .right input::placeholder {
   position: relative;
   margin-left: 20px;
 }
 
-.footer-upper-content .right button{
-    height: 50px;
-    width: 140px;
-    border: none;
-    outline: none;
-    border-radius: 27px;
+.footer-upper-content .right button {
+  height: 50px;
+  width: 140px;
+  border: none;
+  outline: none;
+  border-radius: 27px;
 }
 
+.footer-lower-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 30px;
 
-.footer-lower-content{
-    display: flex;
+  height: 270px;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+.footer-lower-content p {
+  margin-top: 17px;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 880px) {
+  .footer-upper-content {
+    flex-direction: column;
+    height: 200px;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    gap: 30px;
+  }
+  .footer-upper-content .right button {
+    width: 130px;
+  }
+  .main-footer {
+    height: 640px;
+  }
+  .footer-lower-content {
+    height: 380px;
+  }
 
-    height: 270px;
-    border-bottom: 1px solid rgb(172, 172, 172);
-}
-.footer-lower-content p{
-   margin-top: 17px;
-   color: rgb(255, 255, 255);
-}
-
-@media (max-width:880px) {
-    .footer-upper-content{
-        flex-direction: column;
-        height: 200px;
-        align-items: center;
-    }
-    .footer-upper-content .right button{
-        width: 130px;
-
-    }
-    .main-footer{
-      height: 640px;
-    }
-   .footer-lower-content{
-     height: 380px;
-}
-
-.footer-lower-content .content:first-child{
+  .footer-lower-content .content:first-child {
     display: none;
-}
+  }
 }
 
-@media (max-width:700px) {
-    
-    .footer-lower-content .content:last-child{
-        display: none;
-    }
-    .footer-lower-content{
-        height: 280px;
-   }
-   .main-footer{
+@media (max-width: 700px) {
+  .footer-lower-content .content:last-child {
+    display: none;
+  }
+  .footer-lower-content {
+    height: 280px;
+  }
+  .main-footer {
     height: 580px;
-   }
+  }
 }

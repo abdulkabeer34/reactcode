@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:wght@300&display=swap");
 
-.nav-center{
+.nav-center {
   background-color: #115061;
   color: white;
   height: 70px;
@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 
-.nav-center ul{
+.nav-center ul {
   display: flex;
 }
 
@@ -24,14 +24,12 @@
   padding: 3rem;
 }
 
-
-.logo{
+.logo {
   color: rgb(255, 255, 255);
-  font-size:1.4rem;
+  font-size: 1.4rem;
 }
 
-
-.cart{
+.cart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,15 +40,14 @@
   color: rgb(153, 66, 40);
 }
 
-.input-box{
+.input-box {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
   width: 70.5%;
 }
 
-
-.input-box input{
+.input-box input {
   /* border-radius: 5px; */
   height: 2.9rem;
   width: 372%;
@@ -64,7 +61,7 @@
   padding-left: 28px;
 }
 
-.input-box h5{
+.input-box h5 {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
@@ -79,100 +76,99 @@
   z-index: 5;
 }
 
-.login{
+.login {
   display: flex;
   align-items: center;
   font-weight: 800;
 }
 
-.signup-btn{
+.signup-btn {
   margin-right: 10px;
 }
 
-.login-btn{
+.login-btn {
   margin-right: 4px;
   padding: 0.6rem;
   width: 6rem;
   background-color: rgb(28, 113, 32);
 }
 
-.login-signup{
+.login-signup {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
   width: 170px;
 }
 
-
-.login-signup .content h3{
-  font-size: .9rem;
+.login-signup .content h3 {
+  font-size: 0.9rem;
   font-weight: 700;
 }
-.login-signup i{
+.login-signup i {
   font-size: 1.9rem;
 }
 
-.login-signup i:hover{
+.login-signup i:hover {
   color: #fd4b6b;
 }
 
-.nav-center .heart{
+.nav-center .heart {
   display: flex;
   align-items: center;
   width: 123px;
   cursor: pointer;
 }
 
-.nav-center .heart h3{
+.nav-center .heart h3 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 113px;
 }
 
-.links{
+.links {
   text-decoration: none;
 }
 
-.nav-center .heart i{
-  font-size:1rem;
+.nav-center .heart i {
+  font-size: 1rem;
   color: white;
 
   /* font-weight: 700; */
 }
 
-.nav-center .heart i:hover{
-    color: #fd4b6b;
+.nav-center .heart i:hover {
+  color: #fd4b6b;
 }
 
-.nav-center .left{
+.nav-center .left {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 49vw;
 }
 
-.nav-center .right{
+.nav-center .right {
   width: 52vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cart{
+.cart {
   width: 240px;
   display: flex;
   align-items: flex-end;
 }
 
-.cart .content{
+.cart .content {
   display: flex;
   flex-direction: column;
   align-items: start;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.cart i{
+.cart i {
   color: white;
   font-size: 1.7rem;
   /* bottom: 3px; */
@@ -180,7 +176,7 @@
   left: 3px;
 }
 
-.cart  .itemNum{
+.cart .itemNum {
   background-color: rgb(255, 10, 10);
   height: 23px;
   width: 23px;
@@ -188,95 +184,91 @@
   text-decoration: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   display: none;
   position: absolute;
   /* left: 650px; */
   top: 47px;
   background-color: #fd4b6b;
-  margin-left:6px;
+  margin-left: 6px;
   text-decoration: none;
 }
 
-.dropdown-menu ul{
+.dropdown-menu ul {
   display: block;
   list-style: none;
   text-decoration: none;
 }
 
-.dropdown-menu ul li{
+.dropdown-menu ul li {
   width: 100px;
   color: white;
   text-decoration: none;
   /* text-align: start; */
 }
 
-
-.nav-center .heart:hover  .dropdown-menu{
+.nav-center .heart:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu ul li:hover{
+.dropdown-menu ul li:hover {
   text-decoration: underline;
 }
 
-
-@media(max-width:1200px){
-  .cart .content h4:last-child{
+@media (max-width: 1200px) {
+  .cart .content h4:last-child {
     display: none;
   }
-  .cart{
+  .cart {
     align-items: center;
   }
-  
 }
 
-@media(max-width:1050px){
-  .cart .content{
+@media (max-width: 1050px) {
+  .cart .content {
     content: "Cart";
     display: none;
   }
 }
 
 @media (max-width: 860px) {
-  .logo{
+  .logo {
     position: relative;
     left: 0;
   }
-  .login-signup .content{
+  .login-signup .content {
     display: none;
   }
-  .login-signup{
+  .login-signup {
     width: auto;
     border: none;
   }
-  .cart{
+  .cart {
     width: auto;
     border: none;
   }
 }
 
 @media (max-width: 800px) {
-  
-    .cart{
-      width: auto;
-    }
-    .cart .content{
-      display: none;
-    }
-  .input-box{
+  .cart {
+    width: auto;
+  }
+  .cart .content {
+    display: none;
+  }
+  .input-box {
     display: none;
   }
   .nav-center .heart {
     width: auto;
   }
 
-  .login-signup{
+  .login-signup {
     width: auto;
     border: none;
   }
 
-  .cart{
+  .cart {
     border: none;
     display: flex;
     width: auto;
@@ -284,6 +276,5 @@
     align-items: center;
     justify-content: center;
     /* width: 150px; */
-  }  
-
+  }
 }

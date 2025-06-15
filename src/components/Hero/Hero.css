@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@1000&family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:ital,wght@0,200;1,300&family=Ubuntu:wght@300&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@1000&family=Lunasima&family=Noto+Sans+Mahajani&family=Poppins:ital,wght@0,200;1,300&family=Ubuntu:wght@300&display=swap");
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
-.hero-section{
+.hero-section {
   /* min-height: 100vh; */
   height: auto;
   background-color: #115061;
@@ -20,7 +21,7 @@ html,body{
   justify-content: center;
 }
 
-.hero-main{
+.hero-main {
   width: 85vw;
   min-height: 500px;
   height: auto;
@@ -31,7 +32,7 @@ html,body{
   /* background-color: rgb(219, 26, 26); */
 }
 
-.hero-left{
+.hero-left {
   width: 430px;
   height: 300px;
   color: white;
@@ -41,7 +42,7 @@ html,body{
   justify-content: center;
 }
 
-.hero-right{
+.hero-right {
   width: 450px;
   height: 400px;
   display: flex;
@@ -52,9 +53,7 @@ html,body{
   animation-iteration-count: 1;
 }
 
-
-
-.hero-left .content{
+.hero-left .content {
   /* background-color: black; */
   min-width: 430px;
   width: auto;
@@ -63,35 +62,34 @@ html,body{
   animation-iteration-count: 1;
 }
 
-.hero-left .content h3{
+.hero-left .content h3 {
   font-size: 1.2rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "Ubuntu", sans-serif;
   position: relative;
   left: 4px;
 }
 
-.hero-left .content h1{
+.hero-left .content h1 {
   font-size: 3.6rem;
   font-weight: 900;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.hero-left .content h2{
+.hero-left .content h2 {
   font-size: 1.3rem;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   position: relative;
   left: 4px;
 }
 
-.hero-left .content h2 span{
+.hero-left .content h2 span {
   font-size: 1.3rem;
   color: yellow;
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
 }
 
-
-.hero-left .content .btn{
+.hero-left .content .btn {
   width: 140px;
   height: 45px;
   background-color: white;
@@ -101,7 +99,7 @@ html,body{
   font-weight: 900;
   color: black;
   margin-top: 20px;
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,16 +107,15 @@ html,body{
   cursor: pointer;
   position: relative;
   left: 4px;
-  
 }
 
 @keyframes entry-left {
-  0%{
+  0% {
     position: relative;
     left: 100px;
     opacity: 0;
   }
-  100%{
+  100% {
     position: relative;
     left: 0;
     opacity: 1;
@@ -126,19 +123,19 @@ html,body{
 }
 
 @keyframes entry-right {
-  0%{
+  0% {
     position: relative;
     right: 100px;
     opacity: 0;
   }
-  100%{
+  100% {
     position: relative;
     right: 0;
     opacity: 1;
   }
 }
 
-.feature-offers{
+.feature-offers {
   /* background-color: rgb(249, 0, 0); */
   min-height: 180px;
   height: auto;
@@ -150,7 +147,7 @@ html,body{
   flex-wrap: wrap;
 }
 
-.offers-main{
+.offers-main {
   width: 90vw;
   min-height: 250px;
   /* background-color: aquamarine; */
@@ -160,10 +157,10 @@ html,body{
   /* gap: 20px; */
   justify-content: space-evenly;
   flex-wrap: wrap;
-column-gap: 20px;
+  column-gap: 20px;
 }
 
-.feature-offers .offer{
+.feature-offers .offer {
   height: 100px;
   width: 270px;
   background-color: #fff4f4;
@@ -173,51 +170,49 @@ column-gap: 20px;
   border-radius: 5px;
 }
 
-.feature-offers .content{
+.feature-offers .content {
   display: flex;
   justify-content: space-evenly;
   width: 280px;
 }
 
-.feature-offers .content .content-left i{
-  font-size:2rem;
+.feature-offers .content .content-left i {
+  font-size: 2rem;
   color: #fd4b6b;
 }
 
-.feature-offers .content .content-right p{
-  font-size:0.9rem;
+.feature-offers .content .content-right p {
+  font-size: 0.9rem;
   /* color: #fd4b6b; */
   color: #115061;
   font-family: sans-serif;
 }
 
-.feature-offers .content .content-right h3{
-  font-size:1.3rem;
+.feature-offers .content .content-right h3 {
+  font-size: 1.3rem;
   /* font-weight: 800; */
   /* color: #fd4b6b; */
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
 }
 
-@media(max-width:1100px){
-  .feature-offers{
+@media (max-width: 1100px) {
+  .feature-offers {
     min-height: 250px;
   }
-  .offers-main{
+  .offers-main {
     min-height: 250px;
   }
-  .feature-offers .offer{
+  .feature-offers .offer {
     width: 350px;
     gap: 100px;
   }
-
-  
 }
 
-@media(max-width:800px){
-  .feature-offers{
+@media (max-width: 800px) {
+  .feature-offers {
     min-height: 500px;
   }
-  .offers-main{
+  .offers-main {
     min-height: 500px;
   }
 }

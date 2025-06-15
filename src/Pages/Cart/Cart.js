@@ -15,8 +15,8 @@ export default function Cart({ setSelectedValue }) {
   }, []);
 
   async function remove(items) {
-   const itemos = items.currentTarget.parentNode.childNodes[2].childNodes[0].textContent
-
+    const itemos =
+      items.currentTarget.parentNode.childNodes[2].childNodes[0].textContent;
 
     items.currentTarget.parentNode.remove();
     axios.delete(
@@ -25,10 +25,10 @@ export default function Cart({ setSelectedValue }) {
 
     const getItems = async () => {
       let data = await axios.get("http://127.0.0.1:3002/items");
-      setSelectedValue(data.data.item-parseInt(itemos))
-      axios.put("http://127.0.0.1:3002/items",{
-        item:data.data.item-parseInt(itemos)
-      })
+      setSelectedValue(data.data.item - parseInt(itemos));
+      axios.put("http://127.0.0.1:3002/items", {
+        item: data.data.item - parseInt(itemos),
+      });
     };
     getItems();
   }
