@@ -31,7 +31,7 @@ export default function ProductDetail({ setSelectedValue }) {
     setSelectedValue(false);
 
     const res = await axios.get("http://127.0.0.1:3002/items");
-    const newItemCount = res.data.item + count + 455;
+    const newItemCount = res.data.item + count;
     setSelectedValue(newItemCount);
 
     await axios.put("http://127.0.0.1:3002/items", {

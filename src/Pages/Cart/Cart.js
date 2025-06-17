@@ -1,37 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { message, notification } from "antd";
 
 export default function Cart({ setSelectedValue }) {
-  const [NewArr, setNewArr] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   const [shippingCost, setShippingCost] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [loadingCheckout, setLoadingCheckout] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const fetchData = async () => {
-      const res = await axios.get("http://127.0.0.1:3002/cartsDatabase");
-      setNewArr(res.data);
+      try {
+        const res = await axios.get("http://127.0.0.1:3002/cartsDatabase");
+        setCartItems(res.data);
+      } catch (err) {
+        message.error("Failed to load cart data");
+      }
     };
     fetchData();
   }, []);
 
   useEffect(() => {
-    const subtotal = NewArr.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const subtotal = cartItems.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
     setTotalPrice(subtotal + shippingCost);
-  }, [NewArr, shippingCost]);
+  }, [cartItems, shippingCost]);
 
-  const remove = async (e) => {
-    const row = e.target.closest(".product-row");
-    const quantity = parseInt(row?.querySelector(".quantity")?.textContent || "0");
-    const id = e.currentTarget.id;
+  const handleRemove = async (id, quantity) => {
+    try {
+      await axios.delete(`http://127.0.0.1:3002/cartsDatabase/${id}`);
+      const itemsRes = await axios.get("http://127.0.0.1:3002/items");
+      const updatedCount = itemsRes.data.item - quantity;
+      await axios.put("http://127.0.0.1:3002/items", { item: updatedCount });
+      setSelectedValue(updatedCount);
+      setCartItems((prev) => prev.filter((item) => item.id !== id));
+      message.success("Item removed from cart");
+    } catch (err) {
+      message.error("Failed to remove item");
+    }
+  };
 
-    row.remove();
-    await axios.delete(`http://127.0.0.1:3002/cartsDatabase/${id}`);
+  const handleCheckout = async () => {
+    setLoadingCheckout(true);
+    try {
+      const totalQuantity = cartItems.reduce(
+        (acc, item) => acc + item.quantity,
+        0
+      );
 
-    const itemsRes = await axios.get("http://127.0.0.1:3002/items");
-    const updatedCount = itemsRes.data.item - quantity;
-    setSelectedValue(updatedCount);
-    await axios.put("http://127.0.0.1:3002/items", { item: updatedCount });
+      await Promise.all(
+        cartItems.map((item) =>
+          axios.delete(`http://127.0.0.1:3002/cartsDatabase/${item.id}`)
+        )
+      );
+
+      await axios.put("http://127.0.0.1:3002/items", { item: 0 });
+      setSelectedValue(0);
+      setCartItems([]);
+      notification.success({
+        message: "Checkout Successful",
+        description: "Your cart has been cleared and order is being processed.",
+        placement: "topRight",
+      });
+    } catch (err) {
+      console.error(err);
+      message.error("Checkout failed.");
+    } finally {
+      setLoadingCheckout(false);
+    }
   };
 
   return (
@@ -48,13 +87,16 @@ export default function Cart({ setSelectedValue }) {
               <div className="col-md-3 text-end">Action</div>
             </div>
 
-            {NewArr.length === 0 ? (
+            {cartItems.length === 0 ? (
               <div className="text-center py-5">
                 <h5 className="text-muted">🚫 No items in your cart</h5>
               </div>
             ) : (
-              NewArr.map((item) => (
-                <div className="row align-items-center border-bottom py-3 product-row" key={item.id}>
+              cartItems.map((item) => (
+                <div
+                  className="row align-items-center border-bottom py-3 product-row"
+                  key={item.id}
+                >
                   <div className="col-md-5 d-flex align-items-center gap-3">
                     <img
                       src={item.image}
@@ -69,8 +111,7 @@ export default function Cart({ setSelectedValue }) {
                   <div className="col-md-2 quantity">{item.quantity}</div>
                   <div className="col-md-3 text-end">
                     <button
-                      onClick={remove}
-                      id={item.id}
+                      onClick={() => handleRemove(item.id, item.quantity)}
                       className="btn btn-sm btn-outline-danger"
                     >
                       <i className="fas fa-trash me-1"></i>Remove
@@ -91,7 +132,11 @@ export default function Cart({ setSelectedValue }) {
               <div className="d-flex justify-content-between mb-2">
                 <span>Subtotal</span>
                 <span>
-                  ${NewArr.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+                  $
+                  {cartItems.reduce(
+                    (acc, item) => acc + item.price * item.quantity,
+                    0
+                  )}
                 </span>
               </div>
 
@@ -139,8 +184,12 @@ export default function Cart({ setSelectedValue }) {
                 <span>${totalPrice}</span>
               </div>
 
-              <button className="btn btn-dark w-100" disabled={NewArr.length === 0}>
-                Proceed to Checkout
+              <button
+                className="btn btn-dark w-100"
+                disabled={cartItems.length === 0 || loadingCheckout}
+                onClick={handleCheckout}
+              >
+                {loadingCheckout ? "Processing..." : "Proceed to Checkout"}
               </button>
             </div>
           </div>
