@@ -57,8 +57,6 @@ export default function Product_List() {
           <Button variant="outline-warning" size="sm">Top Sellers</Button>
         </div>
       </div>
-
-      {/* Search Bar */}
       <Row className="justify-content-center mb-4">
         <Col md={6}>
           <InputGroup>
@@ -70,14 +68,12 @@ export default function Product_List() {
         </Col>
       </Row>
 
-      {/* Loading Spinner */}
       {loading && (
         <div className="text-center">
           <Spinner animation="border" />
         </div>
       )}
 
-      {/* Product Cards */}
       <Row>
         {!loading && filtered.length > 0 ? (
           filtered.map((item) => (

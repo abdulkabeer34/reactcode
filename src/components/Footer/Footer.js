@@ -8,7 +8,6 @@ export default function Footer() {
       className="text-white py-5 mt-5"
     >
       <Container>
-        {/* Top section */}
         <Row className="align-items-center mb-5">
           <Col md={6} className="mb-3 mb-md-0">
             <h3 className="fw-bold">Sign Up For Emails</h3>
@@ -30,7 +29,6 @@ export default function Footer() {
           </Col>
         </Row>
 
-        {/* Bottom section */}
         <Row className="text-start">
           <Col xs={6} md={3} className="mb-4">
             <h5 className="fw-bold">Contact Us</h5>

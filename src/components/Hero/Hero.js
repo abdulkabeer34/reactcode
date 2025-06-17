@@ -13,7 +13,7 @@ const Hero = () => {
             <Col md={6} className="mb-4 mb-md-0">
               <div className="pe-md-5">
                 <h3 className="fw-light mb-2">Welcome To</h3>
-                <h1 className="fw-bold display-4 mb-3">Super Hero Landing</h1>
+                <h1 className="fw-bold display-4 mb-3">My Ecommerce Shop</h1>
                 <p className="lead">
                   We Are{" "}
                   <span className="text-warning fw-bold">

@@ -46,10 +46,6 @@ export default function Cart({ setSelectedValue }) {
   const handleCheckout = async () => {
     setLoadingCheckout(true);
     try {
-      const totalQuantity = cartItems.reduce(
-        (acc, item) => acc + item.quantity,
-        0
-      );
 
       await Promise.all(
         cartItems.map((item) =>
@@ -77,7 +73,6 @@ export default function Cart({ setSelectedValue }) {
     <div className="container py-5">
       <h2 className="mb-4 text-center">🛒 Your Cart</h2>
       <div className="row g-4">
-        {/* LEFT SIDE */}
         <div className="col-lg-8">
           <div className="bg-light rounded shadow-sm p-3">
             <div className="row fw-bold border-bottom pb-2 mb-3">
@@ -122,8 +117,6 @@ export default function Cart({ setSelectedValue }) {
             )}
           </div>
         </div>
-
-        {/* RIGHT SIDE */}
         <div className="col-lg-4">
           <div className="card shadow-sm">
             <div className="card-body">

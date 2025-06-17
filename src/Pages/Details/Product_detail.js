@@ -65,7 +65,6 @@ export default function ProductDetail({ setSelectedValue }) {
   return (
     <Container className="my-5">
       <Row>
-        {/* Left: Images */}
         <Col md={6} className="text-center">
           <Image
             src={selectedImage || item.images.image}
@@ -95,7 +94,6 @@ export default function ProductDetail({ setSelectedValue }) {
           </div>
         </Col>
 
-        {/* Right: Details */}
         <Col md={6}>
           <h2>{item.name}</h2>
           <p>{item.description}</p>

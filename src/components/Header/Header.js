@@ -28,7 +28,6 @@ export default function Header({ selectedValue }) {
   return (
     <Navbar bg="primary" variant="dark" expand="lg" className="shadow">
       <Container>
-        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">
           MyShop
         </Navbar.Brand>
@@ -36,7 +35,6 @@ export default function Header({ selectedValue }) {
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar" className="justify-content-end">
           <Nav className="align-items-center gap-4">
-            {/* Products Dropdown */}
             <NavDropdown title="Products" id="products-dropdown">
               <NavDropdown.Item as={Link} to="/product-lists/shirts">
                 Shirts
@@ -51,8 +49,6 @@ export default function Header({ selectedValue }) {
                 Hoodies
               </NavDropdown.Item>
             </NavDropdown>
-
-            {/* Cart Icon with Badge */}
             <Nav.Link as={Link} to="/cart" className="position-relative text-white">
               <i className="fa-solid fa-cart-shopping fs-5"></i>
               {itemsCount > 0 && (
